@@ -1,0 +1,28 @@
+sfGoogleClosureCompiler plugin
+==============
+
+The plugin gets all javascript urls in a head tag on a HTML page and replace them compiled version scripts.
+
+Installation
+------------
+
+  * Install the plugin
+
+        $ symfony plugin:install sfGoogleClosureCompilerPlugin
+
+  * Clear cache
+
+        $ symfony cc
+
+
+  * Enable filter in your `filters.yml`
+
+        [php]
+            <?php if ($_SERVER['HTTP_HOST']!='localhost'):?> # not enable the filter on localhost
+            compiler:
+              class: sfGoogleClosureCompilerFilter
+            <?php endif?>
+
+  * Clear you cache
+
+        $ symfony cc
