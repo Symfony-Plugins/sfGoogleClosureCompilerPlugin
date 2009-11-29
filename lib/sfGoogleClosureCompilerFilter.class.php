@@ -9,6 +9,7 @@ class sfGoogleClosureCompilerFilter extends sfFilter
 
   public function execute ($filterChain)
   {
+
     $filterChain->execute();
     // execute this filter only once
     if ($this->isFirstCall())
@@ -16,7 +17,6 @@ class sfGoogleClosureCompilerFilter extends sfFilter
 
       $response = $this->getContext()->getResponse();
       $content = $response->getContent();
-
 
       //print $content;exit;
       $scripts = self::findScripts($content);

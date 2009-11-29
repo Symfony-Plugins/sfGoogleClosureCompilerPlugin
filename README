@@ -10,10 +10,6 @@ Installation
 
         $ symfony plugin:install sfGoogleClosureCompilerPlugin
 
-  * Clear cache
-
-        $ symfony cc
-
 
   * Enable filter in your `filters.yml`
 
